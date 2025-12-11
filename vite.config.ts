@@ -9,7 +9,12 @@ export default defineConfig(({ mode }) => {
         port: 3000,
         host: '0.0.0.0',
       },
-      plugins: [react()],
+export default defineConfig({
+  base: "/harajikufit/",  // <--- 加上這一行，注意前後有引號和斜線
+  plugins: [react()],
+  // ...其他程式碼
+})
+        plugins: [react()],
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
